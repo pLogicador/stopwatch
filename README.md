@@ -1,4 +1,5 @@
-# Cronômetro Simples de 60 minutos para Lives (segue o link abaixo)
+# Cronômetro Simples de 60 minutos para Lives 
+(segue o link abaixo)
 
 Foi desenvolvido com JavaScript, CSS e HTML, é uma ferramenta simples e prática para acompanhar o tempo em intervalos de uma hora. 
 
