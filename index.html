@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- link para font estilo relógio -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+    <!-- defer garante que seu script seja executado em ordem e 
+        apenas depois que o DOM estiver pronto, sem atrasar o 
+        carregamento e a renderização da página. -->
+    <script src="js/script.js" defer></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>A Live começará em breve!</h1>
+        <div class="timer">
+            <div class="time" id="minutes">00</div>
+            <div class="separator">:</div>
+
+            <div class="time" id="seconds">00</div>
+            <div class="separator">:</div>
+
+            <div class="time" id="milliseconds">000</div>
+        </div>
+        <div class="buttons">
+            <button class="btn" id="start">Play</button>
+            <button class="btn" id="pause">Pause</button>
+            <button class="btn" id="resume">Continue</button>
+            <button class="btn" id="reset">Restore</button>
+        </div>
+    </div>
+</body>
+</html>
