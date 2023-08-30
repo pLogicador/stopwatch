@@ -29,4 +29,4 @@ Atualmente, o cronômetro de contagem regresiva está em fase de testes para ava
  
 Para começar a usar o cronômetro, acesse [este link](https://plogicador.github.io/Cronometro/).
 
-*Este projeto foi desenvolvido por [pLogicador] e é distribuído sob a licença [MIT].*
+*Este projeto foi desenvolvido por pLogicador e é distribuído sob a licença MIT License*
