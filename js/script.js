@@ -14,10 +14,12 @@ function atualizarFonte(){
     elementoTimer.style.fontFamily = fonteSelecionada;
     elementoTitulo.style.fontFamily = fonteSelecionada;
 
-    // Atualize também o separador
     const elementoSeparator = document.querySelector(".separator");
     elementoSeparator.style.fontFamily = fonteSelecionada;
-    
+
+    // Atualize o texto da fonte selecionada
+    const elementoFontSelecionada = document.getElementById("fonteAtual");
+    elementoFontSelecionada.textContent = fonteSelecionada;
 }
 
 // Atualize a fonte inicialmente com base no índice atual
@@ -30,6 +32,11 @@ botaoMudarFont.addEventListener("click", function(){
 
     atualizarFonte();
 })
+
+
+
+
+
 
 
 const pegaMinutes = document.querySelector("#minutes");

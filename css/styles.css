@@ -16,16 +16,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /*min-height preenche pelo menos toda a altura da viewport*/
-    color:cornsilk;
-    text-align: center;
-    padding: 1rem;  /*espaçamento ao redor do conteúdo */
+    
+    min-height: 80vh; /* Reduzindo a altura mínima para se adaptar melhor */
+    padding: 2%; /* Usando porcentagem para o espaçamento */
 }
 
 /*Título principal*/
 .container h1{
     color:rgb(50, 230, 89);
-    font-size: 2rem;
+    font-size: 3vw; /*fonte adaptável*/
     margin-bottom: 1rem; /*espaçamento abaixo do título */
 
     text-align: center;
@@ -37,7 +36,7 @@ body {
 
 
 .timer{
-    font-size: 2.5rem; /* Tamanho de fonte maior para o timer */
+    font-size: 5vw; /* Tamanho de fonte maior para o timer */
     font-weight: 500;
     color:chartreuse;
     display: flex;
@@ -49,6 +48,7 @@ body {
 
 
 .time{
+    font-size: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,9 +65,9 @@ body {
 
 /*estilo padrão do separator*/
 .separator{
-    
     padding: 0px 16px;
     color: rgb(159, 187, 160);
+    margin: 5%;
 }
 
 
@@ -79,7 +79,7 @@ body {
 }
 
 #seconds, #minutes{
-    font-size: 4rem;
+    font-size: 5rem;
     color:#fff;
     width: 5rem; 
     text-align: center;
@@ -95,7 +95,7 @@ body {
     padding: 6px 12px; /* espaçamento interno dos botões */
     font-size: 1rem;
     font-weight: lighter;
-    color:khaki;
+    color:rgb(180, 174, 121);
     background-color:darkred;
     border-radius: 2px;
     border: 1px solid gold;
@@ -116,6 +116,12 @@ body {
 #pause, #resume {
     display: none;
 } 
+
+
+
+
+
+
 
 /* Animação de luz piscante infinita*/
 @keyframes shimmer {
@@ -144,11 +150,16 @@ body {
 }
 
 
-#fontSelector {
-    margin-top: 1rem;
+
+/* Estilo para o indicador de fonte selecionada */
+.font-indicator {
     font-size: 1rem;
-    padding: 4px;
+    color: rgb(255, 255, 255);
+    margin-top: 1rem;
+    text-align: center;
 }
+
+
 
 #changeFont{
     font-size: 1rem;
@@ -161,37 +172,29 @@ body {
     z-index: 1;
 }
 
-/*Mudança de fonte para o relógio*/
-#fontSelector[value="Arial"]:checked ~ .timer {
-    font-family: Arial, sans-serif;
-}
-
-#fontSelector[value="Verdana"]:checked ~ .timer {
-    font-family: Verdana, sans-serif;
-}
-
-#fontSelector[value="Open Sans"]:checked ~ .timer {
-    font-family: 'Open Sans', sans-serif;
-}
-
-#fontSelector[value="Monoton"]:checked ~ .timer {
-    font-family: 'Monoton', cursive;
-}
 
 
 
-/*Mudança de fonte para o separator*/
-#fontSelector[value="Arial"]:checked ~ .separator {
-    font-family: Arial, sans-serif;
+
+/*Adaptação ao tamanho da janela*/
+@media screen and (max-width: 768px) {
+    /* Estilos específicos para telas menores (por exemplo, smartphones) */
+    .time {
+        font-size: 3vw; /* Tamanho da fonte menor para telas menores */
+    }
+
+    .timer {
+        font-size: 6vw;
+    }
+
+    .container h1 {
+        font-size: 2vw;
+    }
+
+    #changeFont,
+    .btn {
+        padding: 4px 8px; /* Reduzindo o espaçamento interno dos botões */
+        font-size: 0.8rem; /* Reduzindo o tamanho da fonte */
+    }
 }
 
-#fontSelector[value="Verdana"]:checked ~ .separator {
-    font-family: Verdana, sans-serif;
-}
-
-#fontSelector[value="Open Sans"]:checked ~ .separator {
-    font-family: 'Open Sans', sans-serif;
-}
-#fontSelector[value="Monoton"]:checked ~ .separator {
-    font-family: 'Monoton', cursive;
-}
