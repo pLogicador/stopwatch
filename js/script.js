@@ -1,5 +1,15 @@
 // lista de fontes
-const listaFontes = ["Orbitron", "Arial", "Verdana", "Open Sans" , "Monoton"];
+const listaFontes = ["Orbitron", "Handjet", "Verdana", 
+                    "Open Sans" , "Monoton", "Rubik Iso", 
+                    "Sedgwick Ave Display", "Tilt Prism", "Special Elite", 
+                    "Fredericka the Great", "Rubik Moonrocks", "Bungee Shade", 
+                    "Eater", "Faster One", "Monofett", 
+                    "Nosifer", "Hanalei", "Bungee Spice", 
+                    "Rubik Puddles", "Rubik Beastly", "Rubik Glitch", 
+                    "Geostar Fill", "Nabla", "Arbutus", 
+                    "Fascinate", "Ewert", "Plaster", 
+                    "Jacques Francois Shadow", "Foldit", "Kumar One Outline",
+                    "Ribeye Marrow", "Flavors" ];
 let indiceFontAtual = 0;
 
 const elementoTimer = document.querySelector(".timer");
