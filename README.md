@@ -1,10 +1,30 @@
 # Cronômetro Simples de 60 Minutos para Lives
 
+## Novidade: Mais de 30 Tipos de Fontes de Texto
+
+Nesta atualização, foi expandido significativamente as opções de personalização, foi adicionado mais de 30 tipos de fontes de texto para que você escolha aquela que melhor se adapte às suas preferências. Agora, você pode personalizar a aparência do seu cronômetro de contagem regressiva de acordo com seu estilo e gosto pessoal.
+
+
+![botãoChange](https://github.com/pLogicador/Cronometro/assets/113561981/2f7357b8-c49c-4e10-b1a4-bfc4a8c5534a)
+
+
+### Como Usar as Novas Fontes de Texto
+
+Para utilizar as novas fontes de texto, siga estas simples etapas:
+
+1. Clique no botão "Change Font" para mudar a aparência do crômetro e do título.
+
+2. Veja que ao lado desse botão estão os nomes de cada fonte.
+
+3. Escolha a fonte que você mais gosta.
+
+4. A sua contagem regressiva agora será exibida com a nova fonte escolhida.
 Este é um cronômetro simples desenvolvido com JavaScript, CSS e HTML. Ele foi projetado para ser uma ferramenta prática que permite acompanhar o tempo em intervalos de uma hora. O "Cronômetro de 60 Minutos" é especialmente útil para streamers e criadores de conteúdo que desejam exibir uma contagem regressiva personalizada em suas transmissões ao vivo, criando expectativa e envolvendo a audiência.
 
 O "Cronômetro de 60 Minutos" permite que os streamers e criadores de conteúdo exibam uma contagem regressiva personalizada em suas lives, criando expectativa e envolvendo a audiência.
 
-![gifCronometroJS](https://github.com/pLogicador/Cronometro/assets/113561981/732d03df-b5a0-4313-a2a7-69fa184e72dd)
+![start](https://github.com/pLogicador/Cronometro/assets/113561981/480d98a6-2988-4fc7-bd5f-876ad631f297)
+
 
 
 Recursos Principais:
