@@ -20,6 +20,7 @@ function atualizarFonte(){
     // Atualize o texto da fonte selecionada
     const elementoFontSelecionada = document.getElementById("fonteAtual");
     elementoFontSelecionada.textContent = fonteSelecionada;
+
 }
 
 // Atualize a fonte inicialmente com base no índice atual
