@@ -11,16 +11,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
-    <!-- defer garante que seu script seja executado em ordem e 
-        apenas depois que o DOM estiver pronto, sem atrasar o 
-        carregamento e a renderização da página. -->
-    <script src="js/script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <div class="container">
         <h1>A Live começará em breve!</h1>
-        <div class="timer">
+        <div class="timer" id="timer">
             <div class="time" id="minutes">00</div>
             <div class="separator">:</div>
 
@@ -30,11 +34,24 @@
             <div class="time" id="milliseconds">000</div>
         </div>
         <div class="buttons">
+            <button class="btn" id="changeFont"> Change Font </button>
             <button class="btn" id="start">Play</button>
             <button class="btn" id="pause">Pause</button>
             <button class="btn" id="resume">Continue</button>
             <button class="btn" id="reset">Restore</button>
         </div>
     </div>
+
+
+    <select id="fontSelector">
+        <option value="Orbitron"> Orbitron </option>
+        <option value="Arial"> Arial </option>
+        <option value="Verdana"> Verdana </option>
+        <option value="Open Sans"> Open Sans </option>
+        <option value="Monoton"> Monoton </option>
+        
+    </select>
+
+    <script src="js/script.js" defer></script>
 </body>
 </html>
