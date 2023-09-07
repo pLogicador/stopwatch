@@ -14,7 +14,11 @@ Nesta atualização, foram adicionadas várias novas funcionalidades para melhor
 
 ![Vídeo sem título ‐ Feito com o Clipchamp](https://github.com/pLogicador/Cronometro/assets/113561981/d9450ff2-7933-4e57-b967-3e5def721085)
 
+### Correção de Bugs
 
+Nesta atualização, também foram feitas correções para garantir um funcionamento mais suave e confiável do cronômetro.
+
+Essas melhorias ajudam a aprimorar a experiência geral de uso do cronômetro.
 
 ### Mais Opções de Fonte
 
