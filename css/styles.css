@@ -1,8 +1,8 @@
-
+/* Estilos globais */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*box-sizing evita problemas com margens e paddings */
+    box-sizing: border-box;
 }
 
 body {
@@ -10,43 +10,39 @@ body {
     background-color: black;
 }
 
-
+/* Container principal */
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
-    min-height: 80vh; /* Reduzindo a altura mínima para se adaptar melhor */
-    padding: 2%; /* Usando porcentagem para o espaçamento */
+    min-height: 80vh; 
+    padding: 2%; 
 }
 
 /*Título principal*/
 .container h1{
     color:rgb(50, 230, 89);
-    font-size: 3vw; /*fonte adaptável*/
-    margin-bottom: 1rem; /*espaçamento abaixo do título */
-
+    font-size: 3vw; 
+    margin-bottom: 1rem; 
     text-align: center;
     animation: moveNames 4s ease-in-out infinite, shimmer 2s linear infinite;
-
     letter-spacing: 7px;
 }
 
 
-
+/* Timer */
 .timer{
-    font-size: 5vw; /* Tamanho de fonte maior para o timer */
+    font-size: 5vw;
     font-weight: 500;
     color:chartreuse;
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-family: 'Orbitron', sans-serif;
 }
 
-
+/* Números do temporizador */
 .time{
     font-size: 5vw;
     display: flex;
@@ -54,23 +50,22 @@ body {
     justify-content: center;
     margin-right: 1px;
     color:rgb(159, 187, 160);
-    width: 4rem; /* largura fixa para evitar tremor */
-    text-align: center; /* Centraliza o texto horizontalmente */
-
-    /* Sombra de texto para criar uma borda */
+    width: 4rem;    /* largura fixa para evitar tremor */
+    text-align: center; 
     text-shadow: -3px -2px 0 #f5f5f5, 2px -2px 0 #8f2f2f, 
             -2px 2px 0 #92e48b, 
             2px 2px 0 #17910c;
 }
 
-/*estilo padrão do separator*/
+/* Separador entre os números do temporizador */
 .separator{
-    padding: 0px 16px;
+    /*padding: 0px 16px;*/
+    padding: 0 0.3em;
     color: rgb(159, 187, 160);
     margin: 5%;
 }
 
-
+/* Milissegundos */
 #milliseconds{
     font-size: 1.40rem;
     color:darkgray;
@@ -78,42 +73,77 @@ body {
     text-align: center;
 }
 
-#seconds, #minutes{
+#seconds, 
+#minutes{
     font-size: 5rem;
     color:#fff;
     width: 5rem; 
     text-align: center;
 }
 
+.btnStart{
+    padding: 6px 12px;
+    font-size: 1rem;
+    font-weight: lighter;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color:rgb(22, 255, 22);
+    border: 1px solid rgb(142, 255, 119);
+    background-image: linear-gradient(10deg, black, gray, rgb(145, 98, 106));
+}
+
+
 .buttons{
-    display: flex;
+    display:grid;
     gap: 0.50rem;
-    margin-top: 10rem; /* espaçamento acima dos botões */
+    margin-top: 0.50rem; /* espaçamento acima dos botões */
 }
 
 .btn {
     padding: 6px 12px; /* espaçamento interno dos botões */
     font-size: 1rem;
     font-weight: lighter;
-    color:rgb(180, 174, 121);
-    background-color:darkred;
+    color:rgb(255, 255, 255);
+    background-image: linear-gradient(0deg, rgb(46, 40, 40), rgb(34, 56, 34), red);
     border-radius: 2px;
-    border: 1px solid gold;
+    border: 1px solid rgb(255, 255, 255);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-
 }
+
+/*Estilo para a entrada de minutos*/
+.minutesInput {
+    padding: 6px;
+    width: 70px;
+    color: #ffffff;
+    background-image: linear-gradient(0deg, rgb(26, 12, 12), rgb(46, 65, 46), rgb(92, 79, 79));
+    text-align: center;
+    margin: 1%;
+}
+
+.countdownInput{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top: 5rem;
+    margin: 2%;
+}
+
+
+.countdownInput label{
+    margin-bottom: 1rem;
+}
+
+
 
 .btn:hover {
     transform: scale(0.95);
 }
 
-#start {
-    background-color:darkgreen;
-    color: #fff;
-}
 
-#pause, #resume {
+
+#pause, 
+#resume {
     display: none;
 } 
 
@@ -121,32 +151,17 @@ body {
 
 
 
-
-
-/* Animação de luz piscante infinita*/
+/* Animações */
 @keyframes shimmer {
-    0% {
-        color: rgb(50, 230, 89);
-    }
-    50% {
-        color: rgb(144, 224, 171);
-    }
-    100% {
-        color: rgb(50, 230, 89);
-    }
+    0% {color: rgb(50, 230, 89);}
+    50% {color: rgb(144, 224, 171);}
+    100% {color: rgb(50, 230, 89);}
 }
 
-/* Animação usando @keyframes */
 @keyframes moveNames {
-    0%, 10% {
-        transform: translateX(0); /* Começa e termina na posição inicial */
-    }
-    50%, 5% {
-        transform: translateX(20px); /* Move os nomes para a direita */
-    }
-    0%, 10% {
-        transform: translateX(20); /* Começa e termina na posição inicial */
-    }
+    0%, 10% {transform: translateX(0);}
+    50%, 5% {transform: translateX(20px);}
+    0%, 10% {transform: translateX(20);}
 }
 
 
@@ -159,13 +174,11 @@ body {
     text-align: center;
 }
 
-
-
 #changeFont{
     font-size: 1rem;
     padding: 6px 1px;
     color: #fcfcfc;
-    background-image: linear-gradient(0deg, rgb(92, 18, 141), red);
+    background-image: linear-gradient(0deg, rgb(92, 18, 141), rgb(43, 32, 32));
     border-radius: 4px;
     border: 2px solid rgb(236, 14, 170);
     cursor: pointer;

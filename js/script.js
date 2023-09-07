@@ -57,6 +57,9 @@ const pegaStart = document.querySelector("#start");
 const pegaPause = document.querySelector("#pause");
 const pegaResume = document.querySelector("#resume");
 const pegaReset = document.querySelector("#reset");
+const pegaMinutesInput = document.querySelector("#minutesInput"); // Novo elemento de entrada
+const pegaStartCountdownButton = document.querySelector("#startCountdown"); // Novo botão de início
+
 
 
 let interval;
@@ -70,20 +73,35 @@ pegaStart.addEventListener("click", startCountdown);
 pegaPause.addEventListener("click", pauseCountdown);
 pegaResume.addEventListener("click", resumeCountdown);
 pegaReset.addEventListener("click", resetCountdown);
+pegaStartCountdownButton.addEventListener("click", startCountdownFromInput);
 
+
+function startCountdownFromInput() {
+    const minutesInputValue = parseInt(pegaMinutesInput.value);
+    if (!isNaN(minutesInputValue) && minutesInputValue > 0) {
+        countdownValue = minutesInputValue * 60; // Converter minutos em segundos
+        startCountdown();
+    } else {
+        alert("Por favor, insira um valor válido maior que 0.");
+    }
+}
 
 
 
 function startCountdown(){
     if (!isRunning && countdownValue > 0){
         isRunning = true;
+
         interval = setInterval(()=>{
             countdownValue--;
-            updateDisplay();
 
             if (countdownValue <= 0){
                 stopCountdown();
+            } else {
+                updateDisplay();
             }
+
+            
         }, 1000); // Executa a cada 1 segundo (1000 milissegundos)
     }
 
@@ -125,17 +143,27 @@ function resetCountdown(){
     pegaStart.style.display = "block";
 }
 
+
+
 function updateDisplay(){
     const minutes = Math.floor(countdownValue / 60);
     const seconds = countdownValue % 60;
+    const milliseconds = countdownValue * 10;
 
     pegaMinutes.textContent = formatTime(minutes);
     pegaSeconds.textContent = formatTime(seconds);
+    pegaMilliseconds.textContent = formatMilliseconds(milliseconds);
 }
 
 function formatTime( getstime )
 {
     return getstime < 10 ? `0${getstime}` : getstime;
+}
+
+function formatMilliseconds(milliseconds) {
+    const formatteddMilliseconds = milliseconds.toString().slice(-3);
+
+    return formatteddMilliseconds.padStart(3, "0");
 }
 
 updateDisplay();    // Chamada inicial para exibir o valor inicial
