@@ -16,6 +16,40 @@ const elementoTimer = document.querySelector(".timer");
 const botaoMudarFont = document.querySelector("#changeFont");
 const elementoTitulo = document.querySelector(".container h1"); // Adicionado para selecionar o título
 
+const botaoEditarTitulo = document.querySelector("#edit");
+const elementoCustomTitle = document.querySelector("#customTitle");
+const botaoUpdateTitle  = document.querySelector("#updateTitle");
+
+const LIMIT_CARACTERES = 30;
+
+// função para esconder as funcionalidades de edição do título
+botaoEditarTitulo.addEventListener("click", function () {
+    elementoCustomTitle.style.display = "block";
+    botaoUpdateTitle.style.display = "block";
+});
+
+// função para esconder tudo ao atualizar navamente
+botaoUpdateTitle.addEventListener("click", function () {
+    atualizarTitulo();
+    elementoCustomTitle.style.display = "none";
+    botaoUpdateTitle.style.display = "none";
+});
+
+
+// Função para atualizar o título com o texto inserido pelo usuário
+function atualizarTitulo(){
+    const novoTitulo = elementoCustomTitle.value;
+
+    if (novoTitulo.length <= LIMIT_CARACTERES) {
+        elementoTitulo.textContent = novoTitulo;
+    } else {
+        alert("Ultrapassou o limite de 30 caracteres.");
+    }
+
+
+
+}
+
 
 // Função para atualizar a fonte com base no índice atual
 function atualizarFonte(){
@@ -57,9 +91,9 @@ const pegaStart = document.querySelector("#start");
 const pegaPause = document.querySelector("#pause");
 const pegaResume = document.querySelector("#resume");
 const pegaReset = document.querySelector("#reset");
-const pegaMinutesInput = document.querySelector("#minutesInput"); // Novo elemento de entrada
-const pegaStartCountdownButton = document.querySelector("#startCountdown"); // Novo botão de início
 
+const pegaMinutesInput = document.querySelector("#minutesInput"); // Para entrada personalizada
+const pegaStartCountdownButton = document.querySelector("#startCountdown"); // Novo botão de início
 
 
 let interval;
@@ -68,6 +102,7 @@ let isRunning = false;
 
 
 
+botaoUpdateTitle.addEventListener("click", atualizarTitulo); // ouvinte para atualizar título
 
 pegaStart.addEventListener("click", startCountdown);
 pegaPause.addEventListener("click", pauseCountdown);

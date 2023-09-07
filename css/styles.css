@@ -5,9 +5,17 @@
     box-sizing: border-box;
 }
 
+html, body{
+    height: 100%;   /* Garante que o html e o body ocupem 100% da altura da página */
+}
+
 body {
     font-family: 'Orbitron', sans-serif;
-    background-color: black;
+    background-image: linear-gradient(0deg, black, black, rgb(61, 55, 55));
+    margin: 0;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 /* Container principal */
@@ -29,7 +37,6 @@ body {
     animation: moveNames 4s ease-in-out infinite, shimmer 2s linear infinite;
     letter-spacing: 7px;
 }
-
 
 /* Timer */
 .timer{
@@ -72,7 +79,7 @@ body {
     width: 2rem; 
     text-align: center;
 }
-
+/* Segundos e minutos */
 #seconds, 
 #minutes{
     font-size: 5rem;
@@ -81,72 +88,54 @@ body {
     text-align: center;
 }
 
+/* Botões gerais */
+.btn {
+    background-image: linear-gradient(0deg, rgb(46, 40, 40), rgb(34, 56, 34), red);
+    border: 1px solid rgb(255, 255, 255);
+    color:rgb(141, 209, 255);
+    cursor: pointer;
+    padding: 6px 12px; /* espaçamento interno dos botões */
+    font-size: 1rem;
+    font-family:Geneva, sans-serif;
+    font-weight: lighter;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
 .btnStart{
     padding: 6px 12px;
     font-size: 1rem;
     font-weight: lighter;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    color:rgb(22, 255, 22);
+    font-family:Cambria, sans-serif;
+    color:rgb(135, 255, 135);
     border: 1px solid rgb(142, 255, 119);
-    background-image: linear-gradient(10deg, black, gray, rgb(145, 98, 106));
+    background-image: linear-gradient(10deg, black, gray, rgb(85, 66, 69));
 }
-
 
 .buttons{
     display:grid;
     gap: 0.50rem;
-    margin-top: 0.50rem; /* espaçamento acima dos botões */
+    margin-top: 0.50rem;
 }
 
-.btn {
-    padding: 6px 12px; /* espaçamento interno dos botões */
+/* Botão Editar Título */
+#edit{
+    background-color: #8f2f2f;
+    padding: 5px 15px;
+    margin-top: 30px;
+    font-family:inherit;
     font-size: 1rem;
-    font-weight: lighter;
-    color:rgb(255, 255, 255);
-    background-image: linear-gradient(0deg, rgb(46, 40, 40), rgb(34, 56, 34), red);
-    border-radius: 2px;
-    border: 1px solid rgb(255, 255, 255);
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-/*Estilo para a entrada de minutos*/
-.minutesInput {
-    padding: 6px;
-    width: 70px;
     color: #ffffff;
-    background-image: linear-gradient(0deg, rgb(26, 12, 12), rgb(46, 65, 46), rgb(92, 79, 79));
-    text-align: center;
-    margin: 1%;
 }
 
-.countdownInput{
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    margin-top: 5rem;
-    margin: 2%;
-}
-
-
-.countdownInput label{
-    margin-bottom: 1rem;
-}
-
-
-
-.btn:hover {
-    transform: scale(0.95);
-}
-
-
-
-#pause, 
-#resume {
+/* Elementos ocultos por padrão */
+#customTitle,
+#updateTitle {
     display: none;
-} 
-
+}
 
 
 
@@ -164,25 +153,52 @@ body {
     0%, 10% {transform: translateX(20);}
 }
 
-
-
 /* Estilo para o indicador de fonte selecionada */
 .font-indicator {
     font-size: 1rem;
     color: rgb(255, 255, 255);
-    margin-top: 1rem;
+    margin-top: 40px;
     text-align: center;
 }
 
 #changeFont{
+    background-image: linear-gradient(0deg, rgb(92, 18, 141), rgb(43, 32, 32));
+    font-family: inherit;
     font-size: 1rem;
     padding: 6px 1px;
-    color: #fcfcfc;
-    background-image: linear-gradient(0deg, rgb(92, 18, 141), rgb(43, 32, 32));
+    color: #ff78ed;
     border-radius: 4px;
     border: 2px solid rgb(236, 14, 170);
     cursor: pointer;
 }
+
+/*Estilo para a entrada de minutos*/
+.countdownInput {
+    color: #ffffff;
+    align-items: center;
+}
+
+.minutesInput {
+    padding: 6px;
+    width: 70px;
+    color: #ffffff;
+    background-image: linear-gradient(0deg, rgb(26, 12, 12), rgb(46, 65, 46), rgb(92, 79, 79));
+    text-align: center;
+    margin: 5%;
+
+}
+
+.countdownInput{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.countdownInput label{
+    margin-bottom: 1px;
+}
+
 
 
 
@@ -208,10 +224,63 @@ body {
         font-size: 11vw;
     }
 
+    #edit,
     #changeFont,
+    #customTitle,
+    #updateTitle,
+    .minutesInput,
+    .countdownInput,
+    .font-indicator,
+    #pause, 
+    #resume, 
+    .btnStart,
     .btn {
         padding: 4px 8px; /* Reduzindo o espaçamento interno dos botões */
         font-size: 0.8rem; /* Reduzindo o tamanho da fonte */
     }
 }
+
+
+
+
+
+#edit:hover,
+.btnStart:hover,
+.btn:hover {
+    transform: scale(0.95);
+}
+
+
+
+#pause, 
+#resume {
+    display: none;
+} 
+
+
+
+
+/* Margem superior para o botão e a caixa de entrada de texto */
+#customTitle {
+    margin-top: 60px; /* Ajuste o valor conforme necessário */
+    background-image: linear-gradient(15deg, pink, gray, rgb(228, 215, 215));
+    color:rgb(0, 0, 0);
+
+}
+
+#updateTitle {
+    background-image: linear-gradient(0deg, rgb(92, 18, 141), rgb(43, 32, 32));
+    font-family:inherit;
+    font-size: 1rem;
+    padding: 6px 1px;
+    color: #ff78ed;
+    border-radius: 4px;
+    border: 2px solid rgb(236, 14, 170);
+    cursor: pointer;
+}
+
+
+
+
+
 
