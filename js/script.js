@@ -117,7 +117,7 @@ function startCountdownFromInput() {
         countdownValue = minutesInputValue * 60; // Converter minutos em segundos
         startCountdown();
     } else {
-        alert("Por favor, insira um valor válido maior que 0.");
+        alert("Insira um valor válido maior que 0.");
     }
 }
 
