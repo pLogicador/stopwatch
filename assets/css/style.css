@@ -1,0 +1,86 @@
+@charset "pt-BR";
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+:root {
+    --main-color: #730237;
+    --transparent-color: #BF047E;
+    --primary-color: #000000;
+    --secondary-color: #ae5ba894;
+    --button-one-color: #700421d1;
+    --button-two-color: #A6035D;
+    --display-color: aliceblue;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--main-color);
+}
+
+.container {
+    background: var(--secondary-color);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    width: min(90%, 31.25em);
+    padding: 3em 0;
+    border-radius: 0.4em;
+    box-shadow: 0.40em 0.40em 0.70em var(--primary-color);
+}
+
+.timer-display {
+    position: relative;
+    width: 90%;
+    background: var(--button-one-color);
+    right: -5%;
+    padding: 1em 0;
+    font-family: "Kode Mono", monospace;
+    color: var(--display-color);
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0.4em;
+    box-shadow: 0.20em 0.20em 0.90em var(--button-two-color);
+}
+
+.buttons {
+    width: 88%;
+    margin: 3.8em auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons button {
+    font-size: 1.0em;
+    font-weight: 700;
+    background: var(--transparent-color);
+    color: var(--display-color);
+    border: none;
+    font-family: "Kode Mono", monospace;
+    border-radius: 0.4em;
+    padding: 0.30em 1em;
+    box-shadow: 0em 0.50em 1.50em 0.20em var(--button-two-color);
+    cursor: pointer;
+    outline: none;
+}
+
+#start-timer {
+    background: var(--button-two-color);
+    color: var(--display-color);
+}
+
+footer{
+    background: #1a1a1b;
+    color: #fffefe7c;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

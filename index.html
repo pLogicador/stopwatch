@@ -1,53 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cronometro</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/fonts.css">
-
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>A Live Começará em Breve!</h1>
-
-        <div class="timer" id="timer">
-            <div class="time" id="minutes">00</div>
-            <div class="separator">:</div>
-            
-            <div class="time" id="seconds">00</div>
-            <!-- <div class="separator">:</div> 
-                <div class="time" id="milliseconds">000</div>
-            -->
-        </div>
-
-
-        <!-- Elementos adicionados para a edição do título -->
-        <button id="edit">EDIT TITLE</button>
-        <input type="text" id="customTitle" placeholder="Insira o título desejado">
-        <button id="updateTitle">UPDATE TEXT</button>
-        
-        <div class="countdownInput">
-            <label for="minutesInput">Defina os minutos</label>
-            <input type="number" id="minutesInput" class="minutesInput">
-            <button class="btnStart" id="startCountdown" id="start">START</button>
-        </div>
-        
+        <div class="timer-display">00:00:00:000</div>
         <div class="buttons">
-            <button class="btnStart" id="start">standard</button>
-            <button class="btn" id="pause">PAUSE</button>
-            <button class="btn" id="resume">...</button>
-            <button class="btn" id="reset">REST</button>
-            <button class="btn" id="changeFont"> CHANGE FONT </button>
-        </div>
-
-        <!-- Elemento para mostrar a fonte selecionada -->
-        <div class="font-indicator">
-            <span id="fonteAtual">Orbitron</span>
+            <button id="pause-timer">Pause</button>
+            <button id="start-timer">Start</button>
+            <button id="reset-timer">Reset</button>
         </div>
     </div>
-
-
-    <script src="js/script.js" defer></script>
+    
+    <footer>
+        <p>&copy; pLogicador</p>
+    </footer>
+    
+    <script src="assets/js/main.js"></script>
 </body>
